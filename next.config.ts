@@ -1,10 +1,10 @@
 module.exports = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'openweathermap.org',
-      },
-    ],
-  },
-}
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'openweathermap.org',
+            },
+        ],
+    },
+};
