@@ -16,7 +16,8 @@ concurrency:
 jobs:
     build:
         runs-on: ubuntu-latest
-
+        env:
+          NEXT_PUBLIC_WEATHER_KEY: ${{ secrets.NEXT_PUBLIC_WEATHER_KEY }}
         steps:
             - name: Checkout 🛎️
               uses: actions/checkout@v4
