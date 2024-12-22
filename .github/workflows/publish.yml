@@ -32,14 +32,13 @@ jobs:
             - name: Build with Next.js 🏗️
               run: |
                 echo "Building with Next.js"
-                npx next build
-                pwd
+                npm run build
                 ls -la
 
             - name: Upload artifact 📡
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: /weather-app-next-js/out
+                  path: ./out
 
     deploy:
         environment:
