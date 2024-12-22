@@ -25,10 +25,11 @@ export default function Navbar({ location }: { location?: string }) {
                     setLoadingCity(true);
                     const response = await fetch(
                         `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`
-                    ).then((res) => res.json());
+                    );
+                    const data = await response.json();
                     setTimeout(() => {
                         setLoadingCity(false);
-                        setPlace(response.data.name);
+                        setPlace(data.name);
                     }, 500);
                 } catch (error) {
                     console.error(error);
